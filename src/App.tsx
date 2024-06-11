@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
+import React from "react";
+import Autocomplete from "./components/Autocomplete";
 
-function App() {
+const App: React.FC = () => {
+  const words = [
+    "apple",
+    "app",
+    "banana",
+    "cherry",
+    "date",
+    "fig",
+    "grape",
+    "kiwi",
+    "lemon",
+    "mango",
+    "nectarine",
+    "orange",
+    "papaya",
+    "quince",
+    "raisin",
+    "strawberry",
+    "tangerine",
+    "ugli",
+    "vanilla",
+    "watermelon",
+    "xigua",
+    "yellowfruit",
+    "zucchini",
+    "Macbook apple"
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Autocomplete Feature</h1>
+      <Autocomplete words={words} />
     </div>
   );
-}
+};
 
 export default App;
